@@ -1,0 +1,34 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    mat-drawer-container {
+        height: 100%;
+        mat-drawer {
+            width: 230px;
+        }
+        mat-drawer-content {
+            .titulo {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                margin-bottom: 1em;
+                h1 {
+                    margin: 0 1em 0 0;
+                }
+                h2 {
+                    margin: 0 1em 0 0;
+                    font-weight: 100;
+                }
+                span {
+                    font-weight: 300;
+                }
+            }
+            padding: 1em;
+        }
+    }
+}

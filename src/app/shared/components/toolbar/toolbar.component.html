@@ -1,0 +1,30 @@
+<mat-toolbar [ngStyle]="{'background': corToolBar}">
+    <button mat-icon-button (click)="toggleSideBar()">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span>{{tituloToolBar}}</span>
+    <span class="spacer"></span>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>person</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+
+        <div class="profile-card">
+            <img src="https://avatars3.githubusercontent.com/u/46731099?s=460&v=4" alt="João Pedro Moraes">
+            <div class="header">
+                <h2 class="mat-h2">João Pedro Moraes</h2>
+                <h4>joaopedromoraes@outlook.com</h4>
+            </div>
+        </div>
+
+        <mat-divider></mat-divider>
+
+        <div (click)="$event.stopPropagation();" class="alinhamento-central">
+            <a mat-stroked-button href="https://github.com/JoaoPedroMoraes">
+                <span>Github</span>
+                <mat-icon>link</mat-icon>
+            </a>
+        </div>
+
+    </mat-menu>
+</mat-toolbar>

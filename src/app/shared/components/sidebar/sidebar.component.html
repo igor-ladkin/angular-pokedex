@@ -1,0 +1,20 @@
+<mat-nav-list>
+
+    <ng-container *ngFor="let rota of rotas; index as i; first as isFirst">
+
+        <mat-divider *ngIf="!isFirst"></mat-divider>
+        
+        <h2 matSubheader>{{rota.sessao}}</h2>
+
+        <mat-list-item 
+            *ngFor="let link of rota.itens"
+            [routerLink]="[link.routerLink]"
+            [routerLinkActive]="['active']"
+        >
+            <mat-icon matListIcon>{{link.icon}}</mat-icon>
+            <a matLine>{{link.name}}</a>
+        </mat-list-item>
+
+    </ng-container>
+
+</mat-nav-list>

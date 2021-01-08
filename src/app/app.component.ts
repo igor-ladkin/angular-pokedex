@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TemaService } from 'src/app/shared/services/tema.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-pokedex';
+  constructor(private temaService: TemaService) {
+    this.temaService.update('dark-mode');
+  }
 }

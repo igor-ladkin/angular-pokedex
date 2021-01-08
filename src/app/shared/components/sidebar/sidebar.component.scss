@@ -1,0 +1,7 @@
+:host {
+  --background-active: #343534;
+  .mat-list-item.active{
+    font-weight: bold;
+    background: var(--background-active) !important;
+  }
+}

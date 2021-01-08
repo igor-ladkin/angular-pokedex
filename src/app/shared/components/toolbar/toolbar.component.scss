@@ -1,0 +1,21 @@
+.spacer {
+    flex: 1 1 auto;
+}
+
+.profile-card {
+    text-align: center;
+    padding: 0.625em 1.25em 0.625em 1.25em;
+    img {
+        width: 6.25em;
+        height: 6.25em;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+}
+
+.alinhamento-central {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+}
