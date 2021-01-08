@@ -15,12 +15,17 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { LayoutComponent } from './components/layout/layout.component';
+import { DetalharPokemonComponent } from './components/detalhar-pokemon/detalhar-pokemon.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { HttpClientModule } from '@angular/common/http';
+import { MatChipsModule } from '@angular/material/chips';
 
 @NgModule({
   declarations: [
     SidebarComponent,
     ToolbarComponent,
     LayoutComponent,
+    DetalharPokemonComponent,
   ],
   imports: [
     CommonModule,
@@ -34,9 +39,13 @@ import { LayoutComponent } from './components/layout/layout.component';
     MatButtonModule,
     MatSlideToggleModule,
     MatSidenavModule,
+    MatDialogModule,
+    HttpClientModule,
+    MatChipsModule,
   ],
   exports: [
     LayoutComponent,
+    DetalharPokemonComponent,
   ]
 })
 export class SharedModule { }

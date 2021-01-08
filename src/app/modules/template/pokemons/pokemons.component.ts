@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PokedexService } from './services/pokedex.service';
+import { DetalharPokemonService } from 'src/app/shared/services/detalhar-pokemon.service';
 
 export interface Pokemon {
   name: string;
@@ -13,7 +14,8 @@ export interface Pokemon {
 export class PokemonsComponent implements OnInit {
 
   constructor(
-    private pokedexService: PokedexService
+    private pokedexService: PokedexService,
+    private pokemonDetalhado: DetalharPokemonService
   ) { }
 
   allPokemons:Array<Pokemon>;
@@ -30,11 +32,18 @@ export class PokemonsComponent implements OnInit {
   }
 
   imgPokemon(url) {
-    return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${url.substring(34, url.length - 1)}.png`
+
+    const zeroPad = (num, places) => String(num).padStart(places, '0')
+
+    return `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${zeroPad(this.urlToIdPokemon(url),3)}.png`
   }
 
   urlToIdPokemon(url){
     return url.substring(34, url.length - 1)
+  }
+
+  detalharPokemon(pokemon: Pokemon){
+    this.pokemonDetalhado.abrirDetalhe(pokemon)
   }
 
 }

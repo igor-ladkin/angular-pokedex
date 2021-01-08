@@ -5,12 +5,12 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class PokedexService {
+export class DetalharPokemonService {
 
   constructor(private http: HttpClient) { }
 
-  getAllPokemons(){
-    return this.http.get(`${environment.api}pokemon?offset=0&limit=722`);
+  getPokemon(id){
+    return this.http.get(`${ environment.api }pokemon/${ id }`);
   }
-
+  
 }

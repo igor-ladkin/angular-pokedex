@@ -9,6 +9,7 @@ import { PokedexService } from './services/pokedex.service';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatRippleModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [PokemonsComponent],
@@ -19,6 +20,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatCardModule,
     MatButtonModule,
     MatProgressSpinnerModule,
+    MatRippleModule,
   ],
   providers: [
     PokedexService,

@@ -1,0 +1,22 @@
+mat-dialog-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    img {
+        height: 215px;
+        width: 215px;
+    }
+    div {
+        width: 200px;
+        border: 1px solid #919191;
+        padding: 1em;
+        border-radius: 2%;
+    }
+    button {
+        position: relative;
+    }
+}
+.mat-dialog-title {
+    display: flex;
+    justify-content: space-between;
+}

@@ -2,7 +2,11 @@
     <mat-spinner *ngIf="loading"></mat-spinner>
 </div>
 <ng-container *ngFor="let pokemons of allPokemons">
-    <mat-card class="card">
+    <mat-card 
+        class="card"
+        (click)="detalharPokemon(pokemons)"
+        matRipple
+        >
         <button mat-fab color="warn">{{ urlToIdPokemon(pokemons.url) }}</button>
         <img mat-card-image [src]="imgPokemon(pokemons.url)" alt="Photo of a Shiba Inu">
         <mat-card-header>

@@ -1,0 +1,20 @@
+<h1 mat-dialog-title>
+  {{ pokemon.name | titlecase }}
+  <button mat-fab color="warn">{{ urlToIdPokemon(pokemon.url) }}</button>
+</h1>
+<mat-dialog-content class="mat-typography">
+  <img mat-card-image [src]="imgPokemon(pokemon.url)">
+  <div>
+    <b>Peso:</b>
+    <mat-chip-list><mat-chip color="accent" >{{ dataPokemon.peso }} kg</mat-chip></mat-chip-list>
+    <p><b>Altura:</b>
+    <mat-chip-list><mat-chip color="accent" >{{ dataPokemon.altura }} m</mat-chip></mat-chip-list>
+    <p><b>Tipo:</b>
+    <mat-chip-list><mat-chip color="accent"  *ngFor="let tipo of dataPokemon.tipo">{{ tipo }}</mat-chip></mat-chip-list>
+    <p><b>Habilidades:</b>
+    <mat-chip-list><mat-chip color="accent"  *ngFor="let habilidade of dataPokemon.habilidades">{{ habilidade }}</mat-chip></mat-chip-list>
+  </div>
+</mat-dialog-content>
+<div mat-dialog-actions align="end">
+  <button mat-button [mat-dialog-close]="true">Ok</button>
+</div>
