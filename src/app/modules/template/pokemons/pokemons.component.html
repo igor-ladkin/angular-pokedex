@@ -1,1 +1,14 @@
-<pre>{{ allPokemons | json }}</pre>
+<div class="loading-shade" *ngIf="loading">
+    <mat-spinner *ngIf="loading"></mat-spinner>
+</div>
+<ng-container *ngFor="let pokemons of allPokemons">
+    <mat-card class="card">
+        <button mat-fab color="warn">{{ urlToId(pokemons.url) }}</button>
+        <img mat-card-image [src]="imgPokemon(pokemons.url)" alt="Photo of a Shiba Inu">
+        <mat-card-header>
+            <mat-card-title>
+                {{ pokemons.name | titlecase }}
+            </mat-card-title>
+        </mat-card-header>
+    </mat-card>
+</ng-container>

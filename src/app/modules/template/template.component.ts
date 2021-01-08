@@ -12,7 +12,7 @@ export class TemplateComponent {
     {
       sessao: 'Funcionalidades',
       itens: [
-        {icon: 'dashboard', name: 'Pokémons', routerLink: '/template/pokemons'},
+        {icon: 'dashboard', name: 'Pokémons', routerLink: '/pokemons'},
       ]
     },
   ]
