@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { PokedexService } from './services/pokedex.service';
 
+export interface Pokemon {
+  name: string;
+  url: string;
+}
 @Component({
   selector: 'app-pokemons',
   templateUrl: './pokemons.component.html',
@@ -12,7 +16,7 @@ export class PokemonsComponent implements OnInit {
     private pokedexService: PokedexService
   ) { }
 
-  allPokemons;
+  allPokemons:Array<Pokemon>;
 
   loading: boolean = true;
 
@@ -29,7 +33,7 @@ export class PokemonsComponent implements OnInit {
     return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${url.substring(34, url.length - 1)}.png`
   }
 
-  urlToId(url){
+  urlToIdPokemon(url){
     return url.substring(34, url.length - 1)
   }
 
