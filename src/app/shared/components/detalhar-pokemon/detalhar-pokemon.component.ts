@@ -29,8 +29,6 @@ export class DetalharPokemonComponent implements OnInit {
       this.dataPokemon.altura = data.height / 10;
       this.dataPokemon.tipo = data.types.map(itens=>itens.type.name);
       this.dataPokemon.habilidades = data.abilities.map(itens=>itens.ability.name);
-      console.log(this.dataPokemon.habilidades)
-      
     })
   }
 
