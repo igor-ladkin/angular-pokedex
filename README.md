@@ -30,7 +30,7 @@ npm install -g @angular/cli
 Agora clone este repositório.
 
 ```
-git clone https://github.com/JoaoPedroMoraes/angular-pokedex
+git clone https://github.com/JoaoPedroMoraez/angular-pokedex
 ```
 
 Entre na pasta `angular-pokedex` e rode o comando `yarn` ou `npm install`, para instalar as dependências do projeto.
@@ -47,6 +47,6 @@ Pronto ! Agora basta acessar `http://localhost:4200` :smile:
 
 ## Veja a aplicação no ar :tada:
 
-[Angular Pokédex](https://joaopedromoraes.github.io/angular-pokedex/)
+[Angular Pokédex](https://joaopedromoraez.github.io/angular-pokedex/)
 ## License/Licença do Projeto
 [MIT License](./LICENSE.md) © [João Pedro Moraes](http://github.com/joaopedromoraes)
