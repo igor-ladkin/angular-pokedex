@@ -49,4 +49,4 @@ Pronto ! Agora basta acessar `http://localhost:4200` :smile:
 
 [Angular Pokédex](https://joaopedromoraez.github.io/angular-pokedex/)
 ## License/Licença do Projeto
-[MIT License](./LICENSE.md) © [João Pedro Moraes](http://github.com/joaopedromoraes)
+[MIT License](./LICENSE.md) © [João Pedro Moraes](http://github.com/joaopedromoraez)
